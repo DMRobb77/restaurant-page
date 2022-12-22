@@ -1,6 +1,7 @@
 import homeTabBuilder from "./home-tab";
 import menuTabBuilder from "./menu-tab";
 import contactTabBuilder from "./contact-tab";
+import 'normalize.css';
 import './style.css';
 
 

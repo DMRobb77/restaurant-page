@@ -8,7 +8,7 @@ function homeTabBuilder() {
     //Body
 
     const homeTab = document.createElement('div');
-    homeTab.className = 'main-tab home';
+    homeTab.className = 'home-tab home';
     articleDiv.appendChild(homeTab);
 
     const articleHeader = document.createElement('div');
@@ -34,13 +34,24 @@ function homeTabBuilder() {
     subTitle.className = 'subtitle home';
     imgDiv.appendChild(subTitle);
 
+    const blurb = document.createElement('span');
+    blurb.innerHTML = `For over 30 years, our mission at Planet Pizza has 
+        been to explore the outer reaches of what's possible with pizza. We've 
+        boldly explored the final frontiers of flavor and crash-landed back here
+        on Earth to deliver our discoveries right to your doorstep. Because at
+        Planet Pizza, the sky is no longer the limit. 🚀`;
+    imgDiv.appendChild(blurb);
+
     const hoursDiv = document.createElement('div');
     hoursDiv.className = 'hours home';
     hoursDiv.innerHTML = '<h3>Hours</h3>';
     homeTab.appendChild(hoursDiv);
 
     const hoursList = document.createElement('ul');
-    hoursList.innerHTML = '<li>Sunday 11am - 6pm</li><li>Monday: 10am - 11pm</li><li>Tuseday: 10am - 11pm</li><li>Wednesday: 10am - 11pm</li><li>Thursday: 10am - 11pm</li><li>Friday: 10am - 1am</li><li>Saturday: 10am - 1am</li>'
+    hoursList.innerHTML = `<li>Sunday 11am - 6pm</li><li>Monday: 10am - 11pm
+        </li><li>Tuesday: 10am - 11pm</li><li>Wednesday: 10am - 11pm</li><li>
+        Thursday: 10am - 11pm</li><li>Friday: 10am - 1am</li><li>Saturday: 
+        10am - 1am</li>`
     hoursDiv.appendChild(hoursList);
 
     const locationDiv = document.createElement('div');
