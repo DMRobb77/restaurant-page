@@ -5,11 +5,11 @@ import Pizza from './pizza.jpg'
 function homeTabBuilder() {
     const articleDiv = document.getElementById('article');
 
-    //Body
-
     const homeTab = document.createElement('div');
     homeTab.className = 'home-tab home';
     articleDiv.appendChild(homeTab);
+
+    //Tab title
 
     const articleHeader = document.createElement('div');
     articleHeader.className = 'headerDiv home';
@@ -18,6 +18,8 @@ function homeTabBuilder() {
     const articleHeaderText = document.createElement('h1');
     articleHeaderText.textContent = 'Planet Pizza';
     articleHeader.appendChild(articleHeaderText);
+
+    //First section
 
     const imgDiv = document.createElement('div');
     imgDiv.className = 'img-div home';
@@ -42,20 +44,24 @@ function homeTabBuilder() {
         Planet Pizza, the sky is no longer the limit. 🚀`;
     imgDiv.appendChild(blurb);
 
+    //Second section
+
     const hoursDiv = document.createElement('div');
     hoursDiv.className = 'hours home';
-    hoursDiv.innerHTML = '<h3>Hours</h3>';
+    hoursDiv.innerHTML = `<h3 class='subtitle'>Hours</h3>`;
     homeTab.appendChild(hoursDiv);
 
     const hoursList = document.createElement('ul');
-    hoursList.innerHTML = `<li>Sunday 11am - 6pm</li><li>Monday: 10am - 11pm
-        </li><li>Tuesday: 10am - 11pm</li><li>Wednesday: 10am - 11pm</li><li>
-        Thursday: 10am - 11pm</li><li>Friday: 10am - 1am</li><li>Saturday: 
+    hoursList.innerHTML = `<li>Sunday:   11am - 6pm</li><li>Monday:   10am - 11pm
+        </li><li>Tuesday:   10am - 11pm</li><li>Wednesday:   10am - 11pm</li><li>
+        Thursday:   10am - 11pm</li><li>Friday:   10am - 1am</li><li>Saturday:   
         10am - 1am</li>`
     hoursDiv.appendChild(hoursList);
 
+    //Third section
+
     const locationDiv = document.createElement('div');
-    locationDiv.innerHTML = '<h3>Location</h3> <span>123 South Nebula Drive, Jupiter, Missouri</span>';
+    locationDiv.innerHTML = `<h3 class = 'subtitle'>Location</h3> <span>123 South Nebula Drive, Jupiter, Missouri</span>`;
     locationDiv.className = 'location home';
     homeTab.appendChild(locationDiv);
 

@@ -17,6 +17,14 @@ function tabRefresher(currentTab){
     };
 }
 
+function tabButtonActivator(activatedTab){
+    let allTabs = document.querySelectorAll('.activated');
+    for (let i = 0; i < allTabs.length; i++){
+        allTabs[i].classList.remove('activated');
+    }
+    activatedTab.className = 'activated';
+}
+
 function baseContentBuilder() {
     const contentDiv = document.getElementById('content');
     let currentTab = 'home';
@@ -34,12 +42,14 @@ function baseContentBuilder() {
     //Home tab logic
     const homeTab = document.createElement('li');
     const homeLink = document.createElement('button');
+    homeLink.className = 'activated';
     homeLink.textContent = 'Home';
     homeTab.appendChild(homeLink);
 
     homeLink.addEventListener('click', function(){
         if (currentTab != 'home'){
             tabRefresher(currentTab);
+            tabButtonActivator(homeLink);
             homeTabBuilder();
             currentTab = 'home';
         }
@@ -54,6 +64,7 @@ function baseContentBuilder() {
     menuLink.addEventListener('click', function(){
         if (currentTab != 'menu'){
             tabRefresher(currentTab);
+            tabButtonActivator(menuLink);
             menuTabBuilder();
             currentTab = 'menu';
         }
@@ -68,6 +79,7 @@ function baseContentBuilder() {
     contactLink.addEventListener('click', function(){
         if (currentTab != 'contact'){
             tabRefresher(currentTab);
+            tabButtonActivator(contactLink);
             contactTabBuilder();
             currentTab = 'contact';
         }
