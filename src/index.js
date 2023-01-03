@@ -102,7 +102,10 @@ function footerBuilder(){
     //Footer
     const footerDiv = document.createElement('div');
     footerDiv.className = 'footer';
-    footerDiv.innerHTML = 'footer';
+    footerDiv.innerHTML = `All images from www.unsplash.com - Home Pizza image 
+    by Kelvin T, Pepperoni image by The Nix Company, Four Cheese image by 
+    Mahyar Motebassem, Spinach image by Saundarya Srinivasan, Alien Mask image
+    by Stephen Leonardi, and Background Nebula image by Aldebran S.`;
     contentDiv.appendChild(footerDiv);
 }
 
